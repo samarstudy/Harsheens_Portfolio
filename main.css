@@ -598,3 +598,9 @@ h3 {
 .contact .social_links {
     margin-left: 0 !important;
 }
+
+
+.tags {
+    width: fit-content;
+    max-width: 60%;
+}
