@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 15000px;
+    scroll-behavior: smooth;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+
+/* NAVBAR */
+.first_navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 24px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+}
+
+.first_navbar a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.first_navbar a:first-child {
+    margin-right: auto;
+}
+
+.first_navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: rgba(255, 215, 70, 0.8);
+    transition: width 0.3s ease;
+}
+
+.first_navbar a:hover {
+    color: rgba(255, 215, 70, 0.8);
+    transform: scale(1.05);
+}
+
+.first_navbar a:hover::after {
+    width: 100%;
+}
+
+/* MAIN TITLE */
+h1 {
+    color: white;
+    margin-top: 300px;
+    margin-left: 300px;
+    font-size: 80px;
+}
+
+/* TAGS */
+.tags {
+    margin-top: 40px;
+    margin-left: 305px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.tags span {
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+.tags span:hover {
+    color: rgba(255, 215, 70, 0.9);
+    border-color: rgba(255, 215, 70, 0.6);
+    transform: translateY(-3px);
+}
+
+.break {
+    flex-basis: 100%;
+}
+
+/* SUBTEXT */
+h2 {
+    color: white;
+    margin-top: 90px;
+    margin-left: 310px;
+    font-size: 30px;
+}
+
+h3 {
+    color: #6E6E73;
+    margin-top: 20px;
+    margin-left: 310px;
+    font-size: 24px;
+}
+
+/* CONTACT BUTTONS */
+.tags_2 {
+    margin-top: 40px;
+    margin-left: 305px;
+    display: flex;
+    gap: 20px;
+}
+
+.tags_2 a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+    background-color: white;
+    color: black;
+    text-decoration: none;
+
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* ICON SIZE */
+.tags_2 i {
+    font-size: 18px;
+}
+
+/* HOVER EFFECT */
+.tags_2 a:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 215, 70, 0.9);
+    color: black;
+}
+
+/* NEXT BUTTON */
+.next_page {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(71, 70, 70, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.next_page:hover {
+    transform: scale(1.1);
+    color: rgba(255, 215, 70, 0.8);
+}
+
+#home {
+    scroll-margin-top: 300px;
+     scroll-behavior: smooth;
+}
+
+
+/* SECTION */
+.experience {
+    margin-top: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    color: white;
+}
+
+/* CARD */
+.exp_card {
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 30px;
+    margin-top: 30px;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT (subtle like screenshot) */
+.exp_card:hover {
+    border-color: rgba(255,255,255,0.3);
+    transform: translateY(-4px);
+}
+
+/* HEADER (title + year aligned) */
+.exp_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* TEXT STYLES */
+.exp_header h2 {
+    font-size: 28px;      /* bigger */
+    margin-bottom: 4px;   /* tighter */
+    margin-top: 0;
+    margin-left: 0;
+    letter-spacing: 1px;
+}
+
+.company {
+    font-size: 25px;      /* bigger */
+    margin-top: 10px;     /* reduced */
+    margin-bottom: 10px;  /* reduced */
+    letter-spacing: 1px;
+}
+
+.location {
+    font-size: 20px;      /* slightly bigger */
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 12px;  /* reduced */
+    letter-spacing: 1px;
+}
+
+/* YEAR */
+.year {
+    font-size: 25px;      /* slightly bigger */
+    color: rgba(255,255,255,0.5);
+}
+
+/* DESCRIPTION */
+.desc {
+    font-size: 20px;      /* bigger */
+    line-height: 1.5;    /* tighter lines */
+    margin-top: 4px;      /* reduced */
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.5);
+}
+
+#xp{
+    color: white;
+    margin-top: 300px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    font-size: 40px;
+    scroll-margin-top: 178px;
+     scroll-behavior: smooth;
+}
+
+.leadership {
+    margin-top: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    color: white;
+}
+
+
+#leadership{
+    color: white;
+    margin-top: 300px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    font-size: 40px;
+    scroll-margin-top: 178px;
+     scroll-behavior: smooth;
+}
+
+
+.leadership card {
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 30px;
+    margin-top: 30px;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    min-height: 325px;
+}
+/* scale text inside ONLY this card */
+.leadership_card h2 {
+    font-size: 32px;
+}
+
+.leadership_card .company {
+    font-size: 26px;
+}
+
+.leadership_card .location {
+    font-size: 22px;
+}
+
+.leadership_card .desc {
+    font-size: 22px;
+}
+
+.education {
+    margin-top: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    color: white;
+}
+
+
+#education{
+    color: white;
+    margin-top: 300px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    font-size: 40px;
+    scroll-margin-top: 178px;
+     scroll-behavior: smooth;
+}
+
+
+.contact {
+    margin-top: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    color: white;
+}
+
+#contact{
+    color: white;
+    margin-top: 300px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    font-size: 40px;
+    scroll-margin-top: 178px;
+     scroll-behavior: smooth;
+}
+
+
+.social_links {
+    flex-wrap: wrap;   /* allows it to break nicely on smaller screens */
+    gap: 20px;
+    margin-left: 0px;
+}
+
+/* make all icons align perfectly */
+.social_links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ensure consistent icon sizing */
+.social_links i {
+    font-size: 18px;
+}
+
+/* smooth transition for all buttons */
+.social_links a {
+    transition: all 0.3s ease;
+}
+
+/* Instagram — gradient glow */
+.social_links a.ig:hover {
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+    color: white;
+    box-shadow: 0 0 20px rgba(238, 42, 123, 0.7);
+    transform: translateY(-3px);
+}
+
+/* LinkedIn — blue glow */
+.social_links a.li:hover {
+    background: #0A66C2;
+    color: white;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Facebook — classic blue glow */
+.social_links a.fb:hover {
+    background: #1877F2;
+    color: white;
+    box-shadow: 0 0 20px rgba(24, 119, 242, 0.6);
+    transform: translateY(-3px);
+}
+
+/* TikTok — neon glow */
+.social_links a.tt:hover {
+    background: #111;
+    color: #fff;
+    box-shadow: 
+        0 0 10px #25F4EE,
+        0 0 20px #FE2C55;
+    transform: translateY(-3px);
+}
+
+/* SAME CSS YOU ALREADY HAVE — ONLY ADD THIS AT THE END */
+
+/* KEEP YOUR ORIGINAL CSS EXACTLY AS IS ABOVE THIS POINT */
+
+/* FIX EMAIL + LINKEDIN HOVER (HOME SECTION) */
+.tags_2 a.email_btn:hover {
+    background: #D44638 !important;
+    color: white !important;
+    box-shadow: 0 0 20px rgba(212, 70, 56, 0.6);
+}
+
+.tags_2 a.linkedin_btn:hover {
+    background: #0A66C2 !important;
+    color: white !important;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.6);
+}
+
+/* LEFT SIDEBAR */
+.section_sidebar {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-120%);
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.4s ease;
+    z-index: 9999;
+}
+
+.section_sidebar.show {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.section_sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.section_sidebar a:hover {
+    background: rgba(255, 215, 70, 0.9);
+    color: black;
+    transform: translateX(5px);
+}
+
+
+.section_sidebar a.active {
+    background: rgba(255, 215, 70, 0.9);
+    color: black;
+    transform: translateX(6px);
+}
+
