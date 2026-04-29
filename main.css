@@ -21,7 +21,7 @@ html, body {
     display: flex;
     align-items: center;
     gap: 4rem;
-    font-size: 24px;
+    font-size: 20px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(12px);
@@ -65,7 +65,7 @@ h1 {
     color: white;
     margin-top: 300px;
     margin-left: 300px;
-    font-size: 80px;
+    font-size: 70px;
 }
 
 /* TAGS */
@@ -81,7 +81,7 @@ h1 {
     padding: 12px 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 1px;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(6px);
@@ -103,14 +103,14 @@ h2 {
     color: white;
     margin-top: 90px;
     margin-left: 310px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 h3 {
     color: #6E6E73;
     margin-top: 20px;
     margin-left: 310px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* CONTACT BUTTONS */
@@ -127,7 +127,7 @@ h3 {
     gap: 10px;
 
     padding: 12px 20px;
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 1px;
 
     background-color: white;
@@ -140,7 +140,7 @@ h3 {
 
 /* ICON SIZE */
 .tags_2 i {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 /* HOVER EFFECT */
@@ -164,7 +164,7 @@ h3 {
     justify-content: center;
     backdrop-filter: blur(8px);
     color: white;
-    font-size: 28px;
+    font-size: 24px;
     text-decoration: none;
     transition: all 0.25s ease;
 }
@@ -212,7 +212,7 @@ h3 {
 
 /* TEXT STYLES */
 .exp_header h2 {
-    font-size: 28px;      /* bigger */
+    font-size: 23px;      /* bigger */
     margin-bottom: 4px;   /* tighter */
     margin-top: 0;
     margin-left: 0;
@@ -220,14 +220,14 @@ h3 {
 }
 
 .company {
-    font-size: 25px;      /* bigger */
+    font-size: 20px;      /* bigger */
     margin-top: 10px;     /* reduced */
     margin-bottom: 10px;  /* reduced */
     letter-spacing: 1px;
 }
 
 .location {
-    font-size: 20px;      /* slightly bigger */
+    font-size: 15px;      /* slightly bigger */
     color: rgba(255,255,255,0.5);
     margin-bottom: 12px;  /* reduced */
     letter-spacing: 1px;
@@ -235,13 +235,13 @@ h3 {
 
 /* YEAR */
 .year {
-    font-size: 25px;      /* slightly bigger */
+    font-size: 20px;      /* slightly bigger */
     color: rgba(255,255,255,0.5);
 }
 
 /* DESCRIPTION */
 .desc {
-    font-size: 20px;      /* bigger */
+    font-size: 15px;      /* bigger */
     line-height: 1.5;    /* tighter lines */
     margin-top: 4px;      /* reduced */
     letter-spacing: 1px;
@@ -253,7 +253,7 @@ h3 {
     margin-top: 300px;
     margin-left: 0px;
     margin-bottom: 60px;
-    font-size: 40px;
+    font-size: 35px;
     scroll-margin-top: 178px;
      scroll-behavior: smooth;
 }
@@ -271,7 +271,7 @@ h3 {
     margin-top: 300px;
     margin-left: 0px;
     margin-bottom: 60px;
-    font-size: 40px;
+    font-size: 35px;
     scroll-margin-top: 178px;
      scroll-behavior: smooth;
 }
@@ -287,19 +287,19 @@ h3 {
 }
 /* scale text inside ONLY this card */
 .leadership_card h2 {
-    font-size: 32px;
+    font-size: 27px;
 }
 
 .leadership_card .company {
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .leadership_card .location {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .leadership_card .desc {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .education {
@@ -315,7 +315,7 @@ h3 {
     margin-top: 300px;
     margin-left: 0px;
     margin-bottom: 60px;
-    font-size: 40px;
+    font-size: 35px;
     scroll-margin-top: 178px;
      scroll-behavior: smooth;
 }
@@ -333,7 +333,7 @@ h3 {
     margin-top: 300px;
     margin-left: 0px;
     margin-bottom: 60px;
-    font-size: 40px;
+    font-size: 35px;
     scroll-margin-top: 178px;
      scroll-behavior: smooth;
 }
@@ -354,7 +354,7 @@ h3 {
 
 /* ensure consistent icon sizing */
 .social_links i {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 /* smooth transition for all buttons */
@@ -436,7 +436,7 @@ h3 {
 .section_sidebar a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 13px;
     padding: 10px 14px;
     background: rgba(255,255,255,0.08);
     border-radius: 8px;
@@ -482,23 +482,23 @@ h3,
 
 /* Scale typography */
 h1 {
-    font-size: clamp(40px, 6vw, 80px);
+    font-size: clamp(30px, 6vw, 60px);
     margin-top: clamp(150px, 20vh, 300px);
 }
 
 h2 {
-    font-size: clamp(20px, 3vw, 30px);
+    font-size: clamp(15px, 3vw, 22.5px);
 }
 
 h3 {
-    font-size: clamp(16px, 2.5vw, 24px);
+    font-size: clamp(12px, 2.5vw, 18px);
 }
 
 /* Fix navbar wrapping */
 .first_navbar {
     flex-wrap: wrap;
     gap: clamp(10px, 2vw, 4rem);
-    font-size: clamp(14px, 1.5vw, 24px);
+    font-size: clamp(10.5px, 1.5vw, 18px);
 }
 
 /* Fix section spacing */
@@ -510,7 +510,6 @@ h3 {
 }
 
 /* Fix scroll anchor offset */
-#home,
 #xp,
 #leadership,
 #education,
@@ -534,7 +533,7 @@ h3 {
     }
 
     .first_navbar {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
@@ -559,7 +558,7 @@ h3 {
     }
 
     .first_navbar {
-        font-size: 14px;
+        font-size: 10.5px;
         padding: 10px;
         gap: 10px;
     }
@@ -567,7 +566,7 @@ h3 {
     .next_page {
         width: 50px;
         height: 50px;
-        font-size: 22px;
+        font-size: 18px;
         right: 15px;
         bottom: 15px;
     }
@@ -593,4 +592,9 @@ h3 {
     .contact {
         margin-left: clamp(80px, 12vw, 380px);
     }
+}
+
+
+.contact .social_links {
+    margin-left: 0 !important;
 }
