@@ -8,7 +8,7 @@ html, body {
     width: 100%;
     min-height: 15000px;
     scroll-behavior: smooth;
-    background-color: black;
+    background-color: #211815;
     font-family: Arial, sans-serif;
 }
 
@@ -181,8 +181,53 @@ h3 {
 #home {
     scroll-margin-top: 300px;
      scroll-behavior: smooth;
+     position: relative;
 }
 
+.home_image {
+    position: absolute;
+    top: clamp(150px, 18vh, 220px);
+    right: clamp(100px, 12vw, 250px);
+}
+
+.home_image img {
+    width: clamp(180px, 25vw, 380px);
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .home_image {
+        position: static;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .home_image img {
+        width: 70%;
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .home_image {
+        position: static;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .home_image img {
+        width: 60%;
+        max-width: 350px;
+    }
+
+    .tags {
+        margin-left: 60px;
+        max-width: 90%;
+    }
+}
 
 /* SECTION */
 .experience {
