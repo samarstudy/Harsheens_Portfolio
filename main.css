@@ -157,10 +157,10 @@ h3 {
 /* NEXT BUTTON */
 .next_page {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;        /* smaller */
+    height: 45px;       /* smaller */
     border-radius: 50%;
     background-color: rgba(71, 70, 70, 0.6);
     display: flex;
@@ -168,7 +168,7 @@ h3 {
     justify-content: center;
     backdrop-filter: blur(8px);
     color: white;
-    font-size: 24px;
+    font-size: 18px;    /* smaller arrow */
     text-decoration: none;
     transition: all 0.25s ease;
 }
@@ -778,4 +778,32 @@ h3 {
     margin-top: 15px;      /* keep spacing nice */
     text-align: center;    /* center text */
     font-size: 18px;
+}
+
+
+
+
+/* SIDEBAR SIZE REDUCTION */
+
+.section_sidebar {
+    left: 10px;      /* reduce distance from edge */
+    gap: 8px;        /* reduce spacing between items */
+}
+
+.section_sidebar a {
+    font-size: 11px;     /* smaller text */
+    padding: 6px 10px;   /* smaller button */
+    border-radius: 6px;
+}
+
+.section_sidebar i {
+    font-size: 11px;     /* smaller icon */
+}
+
+.section_sidebar a:hover {
+    transform: translateX(3px);  /* reduce movement */
+}
+
+.section_sidebar a.active {
+    transform: translateX(3px);
 }
