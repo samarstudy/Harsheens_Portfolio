@@ -807,3 +807,20 @@ h3 {
 .section_sidebar a.active {
     transform: translateX(3px);
 }
+
+.next_page {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 18px !important;
+}
+
+.section_sidebar a {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+}
+
+.section_sidebar i {
+    font-size: 11px !important;
+}
+
+
