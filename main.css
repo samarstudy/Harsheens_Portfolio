@@ -229,6 +229,14 @@ h3 {
     }
 }
 
+.brands {
+    margin-top: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    color: white;
+}
+
+
 /* SECTION */
 .experience {
     margin-top: 200px;
@@ -295,6 +303,16 @@ h3 {
     margin-top: 4px;      /* reduced */
     letter-spacing: 1px;
     color: rgba(255,255,255,0.5);
+}
+
+#brands{
+    color: white;
+    margin-top: 300px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    font-size: 35px;
+    scroll-margin-top: 178px;
+     scroll-behavior: smooth;
 }
 
 #xp{
@@ -378,6 +396,25 @@ h3 {
 }
 
 #contact{
+    color: white;
+    margin-top: 300px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    font-size: 35px;
+    scroll-margin-top: 178px;
+     scroll-behavior: smooth;
+}
+
+
+.about {
+    margin-top: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    color: white;
+}
+
+
+#about{
     color: white;
     margin-top: 300px;
     margin-left: 0px;
@@ -514,20 +551,27 @@ h1,
 h2,
 h3,
 .tags_2,
+.brands,
 .experience,
 .leadership,
 .education,
-.contact {
+.contact,
+.about {
     margin-left: clamp(20px, 8vw, 300px);
 }
 
 /* Keep right spacing natural */
+.brands,
 .experience,
 .leadership,
 .education,
-.contact {
+.contact,
+.about
+{
     margin-right: clamp(20px, 8vw, 300px);
 }
+
+
 
 /* Scale typography */
 h1 {
@@ -551,18 +595,22 @@ h3 {
 }
 
 /* Fix section spacing */
+.brands,
 .experience,
 .leadership,
 .education,
-.contact {
+.contact,
+.about {
     margin-top: clamp(120px, 18vh, 200px);
 }
 
 /* Fix scroll anchor offset */
+#brands,
 #xp,
 #leadership,
 #education,
-#contact {
+#contact,
+#about {
     scroll-margin-top: 140px;
 }
 
@@ -573,10 +621,12 @@ h3 {
     h2,
     h3,
     .tags_2,
+    .brands,
     .experience,
     .leadership,
     .education,
-    .contact {
+    .contact,
+    .about {
         margin-left: 60px;
         margin-right: 60px;
     }
@@ -593,10 +643,12 @@ h3 {
     h2,
     h3,
     .tags_2,
+    .brands,
     .experience,
     .leadership,
     .education,
-    .contact {
+    .contact,
+    .about {
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -635,10 +687,12 @@ h3 {
     h2,
     h3,
     .tags_2,
+    .brands,
     .experience,
     .leadership,
     .education,
-    .contact {
+    .contact,
+    .about {
         margin-left: clamp(80px, 12vw, 380px);
     }
 }
@@ -649,3 +703,79 @@ h3 {
 }
 
 
+.work_btn,
+.talk_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+    font-size: 17px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    border-radius: 999px; 
+    background: white;
+    color: black;
+}
+
+/* individual styling */
+.work_btn {
+    background: white;
+    color: black;
+}
+
+.talk_btn {
+    background: white;
+    color: black;
+}
+
+/* hover */
+.work_btn:hover,
+.talk_btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    background-color: rgba(255, 215, 70, 0.9);
+    color: black;
+}
+
+
+
+
+/*  PROJECT GRID (RESPONSIVE)*/
+
+.projects_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* each card */
+.project_item {
+    text-align: center;
+}
+
+/* image */
+.project_item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;   /* prevents stretching */
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* hover effect */
+.project_item img:hover {
+    transform: scale(1.05);
+}
+
+/* FIX PROJECT TITLE ALIGNMENT */
+.project_item h2 {
+    margin-left: 0;        /* remove global push */
+    margin-top: 15px;      /* keep spacing nice */
+    text-align: center;    /* center text */
+    font-size: 18px;
+}
