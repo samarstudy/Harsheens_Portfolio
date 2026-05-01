@@ -236,6 +236,13 @@ h3 {
     color: white;
 }
 
+.pitch {
+    margin-top: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    color: white;
+}
+
 
 /* SECTION */
 .experience {
@@ -306,6 +313,17 @@ h3 {
 }
 
 #brands{
+    color: white;
+    margin-top: 300px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    font-size: 35px;
+    scroll-margin-top: 178px;
+     scroll-behavior: smooth;
+}
+
+
+#pitch{
     color: white;
     margin-top: 300px;
     margin-left: 0px;
@@ -552,6 +570,7 @@ h2,
 h3,
 .tags_2,
 .brands,
+.pitch,
 .experience,
 .leadership,
 .education,
@@ -562,6 +581,7 @@ h3,
 
 /* Keep right spacing natural */
 .brands,
+.pitch,
 .experience,
 .leadership,
 .education,
@@ -596,6 +616,7 @@ h3 {
 
 /* Fix section spacing */
 .brands,
+.pitch,
 .experience,
 .leadership,
 .education,
@@ -606,6 +627,7 @@ h3 {
 
 /* Fix scroll anchor offset */
 #brands,
+#pitch,
 #xp,
 #leadership,
 #education,
@@ -622,6 +644,7 @@ h3 {
     h3,
     .tags_2,
     .brands,
+    .pitch,
     .experience,
     .leadership,
     .education,
@@ -644,6 +667,7 @@ h3 {
     h3,
     .tags_2,
     .brands,
+    .pitch,
     .experience,
     .leadership,
     .education,
@@ -688,6 +712,7 @@ h3 {
     h3,
     .tags_2,
     .brands,
+    .pitch,
     .experience,
     .leadership,
     .education,
@@ -823,4 +848,89 @@ h3 {
     font-size: 11px !important;
 }
 
+
+
+.insta_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+/* card wrapper */
+.insta_card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* image */
+.insta_card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* hover zoom */
+.insta_card:hover img {
+    transform: scale(1.05);
+}
+
+/* overlay (still used for View Post button only) */
+.insta_card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* image */
+.insta_card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* hover zoom */
+.insta_card:hover img {
+    transform: scale(1.05);
+}
+
+/* View Profile ALWAYS visible top-right */
+.insta_profile {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: #1877F2;   /* blue */
+    color: white;
+
+    font-size: 12px;
+    padding: 8px 12px;
+
+    border-radius: 6px;   /* rectangular (not pill) */
+    text-decoration: none;
+
+    z-index: 2;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.insta_profile:hover {
+    background: #0A66C2;
+    transform: translateY(-2px);
+}
+
+
+.insta_grid {
+    align-items: stretch; 
+}
 
