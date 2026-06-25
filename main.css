@@ -91,7 +91,7 @@ h1 {
 
 .tags pre {
     color: #e8a7d8;
-    font-size: 15px;
+    font-size: 12px;
     
     
 }
@@ -1261,9 +1261,13 @@ h3 {
 .carousel_track::-webkit-scrollbar { 
     display: none; 
 } 
-.carousel_track .insta_card { 
-    flex: 0 0 calc((100% - 40px) / 3); 
-} 
+
+.carousel_track .insta_card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    aspect-ratio: 4 / 5;
+    position: relative;
+}
+
 .carousel_btn { 
     position: absolute; 
     z-index: 20; 
@@ -1287,14 +1291,21 @@ h3 {
 .carousel_btn.next { 
     right: -25px; 
 } 
-.carousel_track .insta_card img { 
-    width: 100%; 
-    aspect-ratio: 4/5; 
-    object-fit: cover; 
-} 
-.carousel_track .insta_card:hover { 
-    transform: scale(1.05); 
-    transition: 0.3s ease; 
+.carousel_track .insta_card img,
+.carousel_track .insta_card video {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+.carousel_track .insta_card {
+    transition: transform 0.3s ease;
+}
+
+.carousel_track .insta_card:hover {
+    transform: scale(1.03);
 }
 
 
@@ -1318,27 +1329,25 @@ h3 {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
+    width: 100%;
+    height: 100%;
 }
 
+/* IMPORTANT FIX */
 .mini_track {
     display: flex;
-    overflow-x: hidden;   /* KEY CHANGE */
-    scroll-behavior: smooth;
-    display: flex;
-    transition: transform 0.4s ease;
-
-    gap: 0;               /* important */
-    padding: 0;
-}
-
-.mini_track::-webkit-scrollbar {
-    display: none;
-}
-
-.mini_track img {
-    min-width: 100%;
     width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+/* each slide MUST be fixed width */
+.mini_track img {
     flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* buttons */
@@ -1346,7 +1355,7 @@ h3 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 5;
+    z-index: 10;
     background: rgba(0,0,0,0.6);
     color: white;
     border: none;
@@ -1356,9 +1365,50 @@ h3 {
     cursor: pointer;
 }
 
-.mini_prev { left: 5px; }
-.mini_next { right: 5px; }
+.mini_prev { left: 6px; }
+.mini_next { right: 6px; }
 
 
 
 
+
+
+
+
+
+
+
+.view_reel_btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-decoration: none;
+
+    padding: 8px 14px;
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.view_reel_btn:hover {
+    background: rgba(255, 215, 70, 0.95);
+    color: black;
+}
+
+
+
+
+.insta_card {
+    position: relative;
+    overflow: visible;   /* IMPORTANT CHANGE */
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
