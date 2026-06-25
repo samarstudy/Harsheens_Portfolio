@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harsheen Kaur's Portfolio</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -16,51 +15,69 @@
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="first_navbar">
-    <a href="index.html">Harsheen Kaur's Portfolio</a>
+    <a href="index.html" class="brand">Harsheen Kaur's Portfolio</a>
     <a href="#home">Home</a>
     <a href="#brands">Projects</a>
     <a href="#pitch">Pitch Decks</a>
     <a href="#contact">Contact</a>
 </nav>
 
-<div class="container">
 
-    <h1 id="home">Harsheen Kaur Arora</h1>
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="home">
+    <div class="hero__grid">
 
-    <div class="home_image">
-        <img src="pfp.jpg" alt="Profile Image">
+        <div class="hero__copy">
+            <h1 class="hero__title">
+                <span class="line"><span>Harsheen</span></span>
+                <span class="line"><span>Kaur Arora</span></span>
+            </h1>
+
+            <div class="tags hero__intro">
+                <p class="intro-line">Copywriter by profession, professional overthinker by choice.</p>
+                <p>While everyone warned me against turning my passion into my career, I decided to do exactly that! As an observant person, I pick up on details that others often miss and transform them into ideas that connect with people.</p>
+                <p>I believe the smallest observations often lead to the biggest ideas, and that's where my creativity thrives. Curious by nature and eager to keep learning, I approach every challenge as an opportunity to grow.</p>
+                <p>Much like my name, Harsheen, which means divine light, I hope to illuminate ideas with creativity, curiosity, and a fresh perspective.</p>
+            </div>
+
+            <div class="hero__meta">
+                <h2>Marketing &amp; Copy Writing</h2>
+                <h3>Mumbai, India</h3>
+            </div>
+
+            <div class="tags_2 hero__cta">
+                <a href="#brands" class="work_btn">View My Work &#x279C;</a>
+                <a href="#contact" class="talk_btn">Let's Talk</a>
+            </div>
+        </div>
+
+        <div class="home_image hero__portrait">
+            <img src="pfp.jpg" alt="Harsheen Kaur Arora">
+        </div>
+
     </div>
+</header>
 
-    <div class="tags">
-<pre>
-<span class="intro-line">Copywriter by profession, professional overthinker by choice.</span>
 
-While everyone warned me against turning my passion into my career, I decided to do exactly
-that! As an observant person, I pick up on details that others often miss and transform them into
-ideas that connect with people. 
-
-I believe the smallest observations often lead to the biggest ideas, and that's where my creativity 
-thrives. Curious by nature and eager to keep learning, I approach every challenge as an
-opportunity to grow. 
-
-Much like my name, Harsheen, which means divine light, I hope to illuminate ideas with
-creativity, curiosity, and a fresh perspective. 
-
-</pre>
+<!-- ===================== BRAND MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+        <span>Malabar Gold &amp; Diamonds</span><span class="dot">&bull;</span>
+        <span>Jaro Education</span><span class="dot">&bull;</span>
+        <span>IIFA</span><span class="dot">&bull;</span>
+        <span>Adani</span><span class="dot">&bull;</span>
+        <span>Corcium</span><span class="dot">&bull;</span>
+        <span>Mount Litera Zee School</span><span class="dot">&bull;</span>
+        <span>Malabar Gold &amp; Diamonds</span><span class="dot">&bull;</span>
+        <span>Jaro Education</span><span class="dot">&bull;</span>
+        <span>IIFA</span><span class="dot">&bull;</span>
+        <span>Adani</span><span class="dot">&bull;</span>
+        <span>Corcium</span><span class="dot">&bull;</span>
+        <span>Mount Litera Zee School</span><span class="dot">&bull;</span>
     </div>
-
-    <h2>Marketing &amp; Copy Writing</h2>
-    <h3>Mumbai, India</h3>
-
-    <div class="tags_2">
-        <a href="#brands" class="work_btn">View My Work &#x279C;</a>
-        <a href="#contact" class="talk_btn">Let's Talk</a>
-    </div>
-
 </div>
-
-<a class="next_page" id="nextBtn" href="#brands">&#x2192;</a>
 
 
 <!-- ===================== BRANDS ===================== -->
@@ -92,8 +109,6 @@ creativity, curiosity, and a fresh perspective.
 
     </div>
 
-    <br><br><br><br>
-
     <div class="projects_grid">
 
         <div class="project_item">
@@ -117,29 +132,23 @@ creativity, curiosity, and a fresh perspective.
 
     </div>
 
-    <br><br><br><br>
 
-
-    <!-- ===================== JARO EDUCATION ===================== -->
+    <!-- ---------- CAROUSEL 1 · JARO EDUCATION ---------- -->
     <div class="exp_card">
-
         <div class="exp_header">
             <h2>Jaro Education</h2>
         </div>
 
         <div class="carousel_wrapper">
-
             <button class="carousel_btn prev" aria-label="Previous">&#10094;</button>
 
             <div class="carousel_track">
 
-                <!-- CARD 1 (reel) -->
                 <div class="insta_card">
                     <video src="jaro.mp4" controls></video>
                     <a href="https://www.instagram.com/reel/DT9QnMfiJQf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="view_reel_btn">View Reel</a>
                 </div>
 
-                <!-- CARD 2 (mini carousel) -->
                 <div class="insta_card">
                     <div class="mini_carousel">
                         <button class="mini_prev" aria-label="Previous">&#8249;</button>
@@ -153,7 +162,6 @@ creativity, curiosity, and a fresh perspective.
                     <a href="https://example.com" target="_blank" class="view_reel_btn">View Post</a>
                 </div>
 
-                <!-- CARD 3 (mini carousel) -->
                 <div class="insta_card">
                     <div class="mini_carousel">
                         <button class="mini_prev" aria-label="Previous">&#8249;</button>
@@ -167,7 +175,6 @@ creativity, curiosity, and a fresh perspective.
                     <a href="https://example.com" target="_blank" class="view_reel_btn">View Post</a>
                 </div>
 
-                <!-- CARD 4 (single image) -->
                 <div class="insta_card">
                     <img src="jaro post 3.jpg" alt="">
                     <a href="https://www.instagram.com/p/DWgTnbUCH1q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="view_reel_btn">View Post</a>
@@ -176,31 +183,25 @@ creativity, curiosity, and a fresh perspective.
             </div>
 
             <button class="carousel_btn next" aria-label="Next">&#10095;</button>
-
         </div>
     </div>
 
-    <br><br><br><br>
 
-    <!-- ===================== MALABAR ===================== -->
+    <!-- ---------- CAROUSEL 2 · MALABAR GOLD AND DIAMONDS ---------- -->
     <div class="exp_card">
-
         <div class="exp_header">
             <h2>Malabar Gold and Diamonds</h2>
         </div>
 
         <div class="carousel_wrapper">
-
             <button class="carousel_btn prev" aria-label="Previous">&#10094;</button>
 
             <div class="carousel_track">
 
-                <!-- CARD 1 -->
                 <div class="insta_card">
                     <img src="malabar1.png" alt="">
                 </div>
 
-                <!-- CARD 2 (mini carousel) -->
                 <div class="insta_card">
                     <div class="mini_carousel">
                         <button class="mini_prev" aria-label="Previous">&#8249;</button>
@@ -213,12 +214,10 @@ creativity, curiosity, and a fresh perspective.
                     </div>
                 </div>
 
-                <!-- CARD 3 -->
                 <div class="insta_card">
                     <img src="malabar5.png" alt="">
                 </div>
 
-                <!-- CARD 4 -->
                 <div class="insta_card">
                     <img src="malabar6.png" alt="">
                 </div>
@@ -226,7 +225,6 @@ creativity, curiosity, and a fresh perspective.
             </div>
 
             <button class="carousel_btn next" aria-label="Next">&#10095;</button>
-
         </div>
     </div>
 </section>
@@ -236,19 +234,16 @@ creativity, curiosity, and a fresh perspective.
 <section class="suntory">
     <div class="suntory_section">
         <div class="media_split">
-
             <div class="media_visual">
                 <video controls>
                     <source src="s.mp4" type="video/mp4">
                 </video>
             </div>
-
             <div class="media_copy">
                 <h1 id="suntory">Suntory</h1>
                 <p>Using a brief from the D&amp;AD website, I collaborated with a team to conceptualise and develop this product from scratch.</p>
                 <p>From decoding the brief and generating ideas to execution and the final shoot, this hands-on experience helped me understand the creative process in depth and taught me how to bring a brief to life through a tangible outcome.</p>
             </div>
-
         </div>
     </div>
 </section>
@@ -258,16 +253,13 @@ creativity, curiosity, and a fresh perspective.
 <section class="yl">
     <div class="yl_section">
         <div class="media_split reverse">
-
             <div class="media_visual">
                 <img src="yl.png" alt="Young Lions campaign">
             </div>
-
             <div class="media_copy">
                 <h1 id="yl">Young Lions</h1>
                 <p>Developed a print campaign based on the Cannes Young Lions brief, transforming strategic insights into a strong creative concept. Crafted impactful copy and visual messaging to effectively communicate the campaign's core idea, engage the target audience, and create meaningful impact.</p>
             </div>
-
         </div>
     </div>
 </section>
@@ -277,16 +269,13 @@ creativity, curiosity, and a fresh perspective.
 <section class="adan">
     <div class="adan_section">
         <div class="media_split">
-
             <div class="media_visual">
                 <img src="yl.png" alt="Adani Protecht 2026">
             </div>
-
             <div class="media_copy">
                 <h1 id="adan">Adani</h1>
                 <p>Seeing an idea transform into a real experience was one of the most exciting parts of working on Adani's Protecht 2026. From conceptualizing the event name to shaping the cosplay flow and execution process, it was a project I truly enjoyed working on.</p>
             </div>
-
         </div>
     </div>
 </section>
@@ -297,38 +286,16 @@ creativity, curiosity, and a fresh perspective.
     <h1 id="pitch">Pitch Decks</h1>
 
     <div class="projects_grid">
-        <div class="project_item">
-            <img src="" alt="Image 1">
-            <h2>Image 1</h2>
-        </div>
-        <div class="project_item">
-            <img src="" alt="Image 2">
-            <h2>Image 2</h2>
-        </div>
-        <div class="project_item">
-            <img src="" alt="Image 3">
-            <h2>Image 3</h2>
-        </div>
+        <div class="project_item"><img src="" alt="Image 1"><h2>Image 1</h2></div>
+        <div class="project_item"><img src="" alt="Image 2"><h2>Image 2</h2></div>
+        <div class="project_item"><img src="" alt="Image 3"><h2>Image 3</h2></div>
     </div>
-
-    <br><br><br><br>
 
     <div class="projects_grid">
-        <div class="project_item">
-            <img src="" alt="Image 4">
-            <h2>Image 4</h2>
-        </div>
-        <div class="project_item">
-            <img src="" alt="Image 5">
-            <h2>Image 5</h2>
-        </div>
-        <div class="project_item">
-            <img src="" alt="Image 6">
-            <h2>Image 6</h2>
-        </div>
+        <div class="project_item"><img src="" alt="Image 4"><h2>Image 4</h2></div>
+        <div class="project_item"><img src="" alt="Image 5"><h2>Image 5</h2></div>
+        <div class="project_item"><img src="" alt="Image 6"><h2>Image 6</h2></div>
     </div>
-
-    <br><br><br><br>
 </section>
 
 
@@ -338,9 +305,7 @@ creativity, curiosity, and a fresh perspective.
 
     <div class="exp_card leadership_card">
         <div class="exp_header">
-            <div>
-                <h2>Channels for contact</h2>
-            </div>
+            <div><h2>Channels for contact</h2></div>
         </div>
 
         <p class="desc">Reach out to me on</p>
@@ -355,7 +320,10 @@ creativity, curiosity, and a fresh perspective.
 </section>
 
 
-<!-- SECTION SIDEBAR (LEFT) -->
+<!-- FLOATING NEXT BUTTON -->
+<a class="next_page" id="nextBtn" href="#brands">&#x2192;</a>
+
+<!-- LEFT SECTION SIDEBAR -->
 <div class="section_sidebar">
     <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
     <a href="#brands"><i class="fa-solid fa-diagram-project"></i> Projects</a>
