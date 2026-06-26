@@ -402,18 +402,22 @@ html.js .hero__cta, html.js .hero__portrait {
     border: 1px solid var(--line);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.pitch .project_item:hover img {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px rgba(241, 120, 182, 0.14);
-}
+
 .pitch .project_item h2 {
     font-size: clamp(14px, 1.4vw, 17px);
     margin-top: 14px;
 }
 
-/* pitch items need relative positioning for the button */
+/* pitch items — entire card is a link */
 .pitch_item {
     position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+.pitch_item:hover img {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px rgba(241, 120, 182, 0.14);
 }
 
 /* =====================================================================
