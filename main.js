@@ -11,7 +11,6 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 (function heroReveal() {
     const hero = document.querySelector(".hero");
     if (!hero) return;
-    // next frame so the initial hidden state is painted first, then transitions
     requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add("in")));
 })();
 
@@ -28,7 +27,44 @@ function updateProgress() {
 }
 
 /* =====================================================================
-   3. EASED SMOOTH SCROLL for in-page anchors
+   3. MOBILE HAMBURGER NAV
+   ===================================================================== */
+(function mobileNav() {
+    const navbar = document.querySelector(".first_navbar");
+    if (!navbar) return;
+
+    // Wrap existing nav links (all <a> except .brand) in a div
+    const links = [...navbar.querySelectorAll("a:not(.brand)")];
+    if (!links.length) return;
+
+    const navLinks = document.createElement("div");
+    navLinks.className = "nav_links";
+    links.forEach(l => navLinks.appendChild(l));
+
+    const toggle = document.createElement("button");
+    toggle.className = "nav_toggle";
+    toggle.setAttribute("aria-label", "Toggle navigation");
+    toggle.innerHTML = "&#9776;";
+
+    navbar.appendChild(toggle);
+    navbar.appendChild(navLinks);
+
+    toggle.addEventListener("click", () => {
+        const open = navLinks.classList.toggle("open");
+        toggle.innerHTML = open ? "&#10005;" : "&#9776;";
+    });
+
+    // Close on link click
+    navLinks.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            toggle.innerHTML = "&#9776;";
+        });
+    });
+})();
+
+/* =====================================================================
+   4. EASED SMOOTH SCROLL for in-page anchors
    ===================================================================== */
 function smoothScrollTo(targetY, duration = 820) {
     if (reduceMotion) { window.scrollTo(0, targetY); return; }
@@ -59,7 +95,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 /* =====================================================================
-   4. STAGGERED SCROLL-REVEAL
+   5. STAGGERED SCROLL-REVEAL
    ===================================================================== */
 (function initReveal() {
     const items = [];
@@ -89,13 +125,13 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
             el.addEventListener("transitionend", cleanup, { once: true });
             setTimeout(cleanup, 1400);
         });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    }, { threshold: 0.10, rootMargin: "0px 0px -30px 0px" });
 
     items.forEach((el) => obs.observe(el));
 })();
 
 /* =====================================================================
-   5. EMPTY IMAGE → PLACEHOLDER (pitch decks)
+   6. EMPTY IMAGE → PLACEHOLDER (pitch decks)
    ===================================================================== */
 (function fillEmptyImages() {
     document.querySelectorAll(".project_item > img").forEach((img) => {
@@ -114,7 +150,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 })();
 
 /* =====================================================================
-   6. NAV STATE — section detection, sidebar, next button
+   7. NAV STATE — section detection, sidebar, next button
    ===================================================================== */
 const sections = ["home", "brands", "pitch", "contact"];
 const nextBtn = document.getElementById("nextBtn");
@@ -146,31 +182,33 @@ function pingSidebar() {
 }
 
 /* =====================================================================
-   7. CAROUSELS (same logic & structure as before)
+   8. CAROUSELS
    ===================================================================== */
 function moveBigCarousel(track, dir) {
     const card = track.querySelector(".insta_card");
     if (!card) return;
-    track.scrollBy({ left: dir * (card.offsetWidth + 24), behavior: "smooth" });
+    track.scrollBy({ left: dir * (card.offsetWidth + 20), behavior: "smooth" });
 }
 
 document.querySelectorAll(".mini_carousel").forEach((carousel) => {
     const track = carousel.querySelector(".mini_track");
-    const images = carousel.querySelectorAll("img");
+    const slides = track.children;
     const next = carousel.querySelector(".mini_next");
     const prev = carousel.querySelector(".mini_prev");
     let index = 0;
+
     const wrapper = carousel.closest(".carousel_wrapper");
     const bigTrack = wrapper ? wrapper.querySelector(".carousel_track") : null;
+
     const update = () => { track.style.transform = `translateX(-${index * 100}%)`; };
 
     next.addEventListener("click", () => {
-        if (index < images.length - 1) { index++; update(); }
-        else if (bigTrack) moveBigCarousel(bigTrack, 1);
+        if (index < slides.length - 1) { index++; update(); }
+        else if (bigTrack) { moveBigCarousel(bigTrack, 1); }
     });
     prev.addEventListener("click", () => {
         if (index > 0) { index--; update(); }
-        else if (bigTrack) moveBigCarousel(bigTrack, -1);
+        else if (bigTrack) { moveBigCarousel(bigTrack, -1); }
     });
 });
 
@@ -183,7 +221,7 @@ document.querySelectorAll(".carousel_wrapper").forEach((wrapper) => {
 });
 
 /* =====================================================================
-   8. EVENTS
+   9. EVENTS
    ===================================================================== */
 window.addEventListener("scroll", () => {
     updateProgress();
