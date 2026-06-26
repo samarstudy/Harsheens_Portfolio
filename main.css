@@ -326,6 +326,7 @@ html.js .hero__cta, html.js .hero__portrait {
 
 /* =====================================================================
    BRANDS — logo grid
+   3 columns on desktop (≥601px), 2 columns on mobile (≤600px)
    ===================================================================== */
 .projects_grid {
     display: grid;
@@ -334,10 +335,16 @@ html.js .hero__cta, html.js .hero__portrait {
     margin-bottom: clamp(32px, 5vw, 64px);
 }
 
+/* Brands-specific: always 3 cols on desktop, 2 on mobile */
+.brands_grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .project_item {
     display: block;
     text-decoration: none;
     color: inherit;
+    position: relative; /* needed for absolute PDF button */
 }
 .project_item img {
     width: 100%;
@@ -402,6 +409,11 @@ html.js .hero__cta, html.js .hero__portrait {
 .pitch .project_item h2 {
     font-size: clamp(14px, 1.4vw, 17px);
     margin-top: 14px;
+}
+
+/* pitch items need relative positioning for the button */
+.pitch_item {
+    position: relative;
 }
 
 /* =====================================================================
@@ -521,6 +533,7 @@ html.js .hero__cta, html.js .hero__portrait {
     font-size: 11px;
     font-weight: 600;
     transition: background 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
 }
 .view_reel_btn:hover { background: var(--pink); color: #1a0f17; }
 
@@ -540,15 +553,24 @@ html.js .hero__cta, html.js .hero__portrait {
 }
 .media_split.reverse .media_visual { order: 2; }
 
-/* ── FIX 1: Young Lions image — smaller, centred ── */
-.yl_section .media_visual {
+/* ── Young Lions: image wrapper — relative so PDF btn can sit on top ── */
+.yl_visual_wrap {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.yl_section .media_visual img {
+.yl_visual_wrap img {
     max-width: 55%;
     height: auto;
+    /* override the generic .media_visual img width:100% */
+    width: auto !important;
+}
+/* PDF button sits on top-right of the image, not the whole column */
+.yl_visual_wrap .view_pdf_btn {
+    /* position relative to the wrapper, but visually on the image */
+    top: 12px;
+    right: calc(50% - 55%/2 - 12px); /* align to right edge of the image */
 }
 
 .media_visual img {
@@ -733,17 +755,22 @@ html.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
     .media_split.reverse .media_visual { order: 0; }
     .media_copy p { max-width: none; }
 
-    /* Young Lions stacked: image full width but capped */
-    .yl_section .media_visual img {
-        max-width: 60%;
+    /* Young Lions stacked: image capped */
+    .yl_visual_wrap img {
+        max-width: 60% !important;
     }
-    .yl_section .media_visual {
+    .yl_visual_wrap {
         justify-content: flex-start;
     }
+    /* Reposition pdf button for stacked layout */
+    .yl_visual_wrap .view_pdf_btn {
+        right: auto;
+        left: calc(60% - 12px - 80px); /* approx right edge of 60%-wide image */
+    }
 
-    /* Brands grid: 2 columns */
-    .projects_grid {
-        grid-template-columns: repeat(2, 1fr);
+    /* Brands: keep 3 columns on tablet */
+    .brands_grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     /* Pitch: 2 columns */
@@ -800,9 +827,12 @@ html.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
     .carousel_btn.prev { left: -6px; }
     .carousel_btn.next { right: -6px; }
 
-    /* Brands: 1 column on small phones, 2 otherwise */
-    .projects_grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .project_item img { height: clamp(130px, 40vw, 200px); }
+    /* Brands: 2 columns on mobile */
+    .brands_grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px;
+    }
+    .brands_grid .project_item img { height: clamp(100px, 35vw, 180px); }
 
     /* Pitch: 2 columns */
     .pitch .projects_grid {
@@ -812,8 +842,12 @@ html.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
     .pitch .project_item img { height: clamp(110px, 36vw, 180px); }
 
     /* Young Lions: full-width image when stacked */
-    .yl_section .media_visual img { max-width: 85%; }
-    .yl_section .media_visual { justify-content: center; }
+    .yl_visual_wrap img { max-width: 85% !important; }
+    .yl_visual_wrap { justify-content: center; }
+    .yl_visual_wrap .view_pdf_btn {
+        right: calc(50% - 42.5% - 8px);
+        left: auto;
+    }
 
     /* Media copy */
     .media_copy p { font-size: 14px; }
