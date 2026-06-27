@@ -664,6 +664,7 @@ html.js .hero__cta, html.js .hero__portrait {
 .social_links a.li:hover { background: #0A66C2; color: #fff; box-shadow: 0 0 22px rgba(10, 102, 194, 0.5); }
 .social_links a.email_btn:hover { background: #D44638; color: #fff; box-shadow: 0 0 22px rgba(212, 70, 56, 0.5); }
 .social_links a.tt:hover { background: var(--pink); color: #1a0f17; box-shadow: 0 0 22px rgba(241, 120, 182, 0.5); }
+.social_links a.wa:hover { background: #25D366; color: #fff; box-shadow: 0 0 22px rgba(37, 211, 102, 0.5); }
 
 /* =====================================================================
    FLOATING NEXT BUTTON + SIDEBAR
